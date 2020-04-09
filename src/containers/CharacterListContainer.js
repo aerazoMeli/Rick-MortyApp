@@ -12,7 +12,6 @@ const instance = axios.create({
 const CharacterListContainer = ({ handles }) => {
     const [characters, setCharacters] = useState([]);
 
-
     const getCharacters = async () => {
         const resp = await instance.get('character');
         const { results } = resp.data;

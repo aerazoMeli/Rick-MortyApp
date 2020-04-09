@@ -2,6 +2,9 @@
     height: 600px;
     overflow: auto;
     &-character_card{
+        // &:nth-child(3){
+        //     background: green;
+        // }
         margin: 10px;
         cursor: pointer;
         &-card-content{
