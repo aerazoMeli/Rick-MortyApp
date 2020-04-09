@@ -1,13 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+
+import './styles.scss';
 
 const CharacterListIitem = ({ character, handles }) => {
     return (
-        <div>
-            <h4>{character.name}</h4>
-            <img src={character.image} height={70}></img>
-            <button onClick={() => handles.handleClickCharacter(character)}>Ver personaje</button>
-        </div>
+        <Card variant='elevation' className='characters-list-character_card' onClick={() => handles.handleClickCharacter(character)}>
+            <CardContent className='characters-list-character_card-card-content'>
+                <img src={character.image} alt='' height={70}></img>
+                <h4>{character.name}</h4>
+            </CardContent>
+        </Card>
     );
 };
 

@@ -1,0 +1,15 @@
+.characters-list{
+    height: 600px;
+    overflow: auto;
+    &-character_card{
+        margin: 10px;
+        cursor: pointer;
+        &-card-content{
+            display: inline-flex;
+            img{
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
