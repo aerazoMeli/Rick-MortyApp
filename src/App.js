@@ -1,25 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Grid, Col, Row } from 'react-flexbox-grid';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import CharacterContainer from './containers/CharacterContainer';
+import CharacterListContainer from './containers/CharacterListContainer';
 
 function App() {
+  const [characterSelected, selectCharacter] = useState(null);
+
+  const handleClickCharacter  = character => {
+    console.log(character);
+    selectCharacter(character);
+  };
+
+
+  const handles = {
+     handleClickCharacter,
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid>
+    <Row>
+        <AppBar position="sticky">
+                <Toolbar>
+                    Rick & Morty App
+                </Toolbar>
+        </AppBar>
+    </Row>
+    <Row>
+        <Col md={6}>
+        <CharacterListContainer handles={handles}/>
+        </Col>
+        <Col md={6}>
+        {
+          characterSelected ? <CharacterContainer character={characterSelected}/> : 'Seleccione Personaje'
+        }
+        </Col>
+    </Row>
+</Grid>
   );
 }
 
