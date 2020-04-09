@@ -31,12 +31,12 @@ function App() {
     </Row>
     <Row>
         <Col md={6}>
-        <CharacterListContainer handles={handles}/>
+          <CharacterListContainer handles={handles}/>
         </Col>
         <Col md={6}>
-        {
-          characterSelected ? <CharacterContainer character={characterSelected}/> : 'Seleccione Personaje'
-        }
+          {
+            characterSelected ? <CharacterContainer character={characterSelected}/> : 'Seleccione Personaje'
+          }
         </Col>
     </Row>
 </Grid>

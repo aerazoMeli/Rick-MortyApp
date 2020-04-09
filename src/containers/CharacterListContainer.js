@@ -8,16 +8,20 @@ const instance = axios.create({
     baseURL:'https://rickandmortyapi.com/api/',
 });
 
+
 const CharacterListContainer = ({ handles }) => {
     const [characters, setCharacters] = useState([]);
 
+
+    const getCharacters = async () => {
+        const resp = await instance.get('character');
+        const { results } = resp.data;
+        setCharacters(results);
+    }
+
     useEffect(() => {
-        instance.get('character')
-        .then(resp => {
-            const { results } = resp.data;
-            setCharacters(results);
-        })
-    });
+        getCharacters();
+    }, []);
 
     return (
         <div>
