@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { Grid, Col, Row } from 'react-flexbox-grid';
 import AppBar from '@material-ui/core/AppBar';
@@ -11,12 +11,11 @@ function App() {
   const [characterSelected, selectCharacter] = useState(null);
 
   const handleClickCharacter  = character => {
-    console.log(character);
     selectCharacter(character);
   };
 
 
-  const handles = {
+  const handlers = {
      handleClickCharacter,
   };
 
@@ -31,7 +30,7 @@ function App() {
     </Row>
     <Row>
         <Col md={6}>
-          <CharacterListContainer handles={handles}/>
+          <CharacterListContainer handlers={handlers}/>
         </Col>
         <Col md={6}>
           <CharacterContainer character={characterSelected}/>

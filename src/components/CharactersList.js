@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CharacterListIitem from './CharacterListIitem';
 
-const CharactersList = ({ characters, handles }) => {
+const CharactersList = ({ characters, handlers }) => {
     return (
         <div className='characters-list'>
             {
-                characters.map(character => <CharacterListIitem handles={handles} key={character.id} character={character}></CharacterListIitem>)
+                characters.map(character => <CharacterListIitem handlers={handlers} key={character.id} character={character}></CharacterListIitem>)
             }
         </div>
     );

@@ -5,9 +5,9 @@ import CardContent from '@material-ui/core/CardContent';
 
 import './styles.scss';
 
-const CharacterListIitem = ({ character, handles }) => {
+const CharacterListIitem = ({ character, handlers }) => {
     return (
-        <Card variant='elevation' className='characters-list-character_card' onClick={() => handles.handleClickCharacter(character)}>
+        <Card variant='elevation' className='characters-list-character_card' onClick={() => handlers.handleClickCharacter(character)}>
             <CardContent className='characters-list-character_card-card-content'>
                 <img src={character.image} alt='' height={70}></img>
                 <h4>{character.name}</h4>

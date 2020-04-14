@@ -5,6 +5,9 @@ import Typography from '@material-ui/core/Typography';
 import './styles.scss';
 
 const CharacterContainer = ({ character}) => {
+
+    console.log('TAG: ',character);
+
     return (
         <div>
             {
@@ -15,7 +18,7 @@ const CharacterContainer = ({ character}) => {
 };
 
 CharacterContainer.propTypes = {
-    
+    character:PropTypes.object,
 };
 
 export default CharacterContainer;

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render component should render correctly in "debug" mode 1`] = `
+<Grid>
+  <Row>
+    <WithStyles(ForwardRef(AppBar))
+      position="sticky"
+    >
+      <WithStyles(ForwardRef(Toolbar))>
+        Rick & Morty App
+      </WithStyles(ForwardRef(Toolbar))>
+    </WithStyles(ForwardRef(AppBar))>
+  </Row>
+  <Row>
+    <Col
+      md={6}
+    >
+      <Component
+        handlers={
+          Object {
+            "handleClickCharacter": [Function],
+          }
+        }
+      />
+    </Col>
+    <Col
+      md={6}
+    >
+      <CharacterContainer
+        character={null}
+      />
+    </Col>
+  </Row>
+</Grid>
+`;
